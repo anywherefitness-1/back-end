@@ -1,7 +1,7 @@
 {
-  "name": "nodeauth-challenge",
+  "name": "back-end",
   "version": "1.0.0",
-  "description": "Authentication Sprint Challenge",
+  "description": "Backend for Anywhere-Fitness-1",
   "main": "index.js",
   "scripts": {
     "server": "nodemon --require dotenv/config index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/Sprint-Challenge-Authentication.git"
+    "url": "git+https://github.com/anywherefitness-1/back-end.git"
   },
   "keywords": [],
   "author": "Lambda School",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LambdaSchool/Sprint-Challenge-Authentication/issues"
+    "url": "https://github.com/anywherefitness-1/back-end/issues"
   },
-  "homepage": "https://github.com/LambdaSchool/Sprint-Challenge-Authentication#readme",
+  "homepage": "https://github.com/anywherefitness-1/back-end#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
