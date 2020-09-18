@@ -17,9 +17,17 @@ function findById(id) {
     return db("Client").select("id", "username").where({ id }).first();
 }
 
+function update(id, changes){
+    return db("Client").where({id}).update(changes);
+}
+async function remove(id) {
+    return await db("Client").where({ id }).del();
+}
 module.exports = {
     add, 
     find,
     findBy,
-    findById
+    findById,
+    update,
+    remove
 }

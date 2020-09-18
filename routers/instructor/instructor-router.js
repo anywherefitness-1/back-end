@@ -84,5 +84,24 @@ router.get("/logout", async (req, res, next) => {
   }
 });
 
+router.put("/update/:id", async (req, res, next)=>{
+    try{
+        const userupdate = await Users.update(req.params.id, req.body);
+        res.json(userupdate);
+
+    } catch(err){
+        next(err)
+    }
+})
+router.delete("/delete/:id", async (req, res, next)=>{
+    try{
+        await Users.remove(req.params.id);
+        
+        res.json()
+
+    } catch(err){
+        next(err)
+    }
+})
 
 module.exports = router;
