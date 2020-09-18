@@ -22,6 +22,6 @@ server.get("/", (req, res) => {
     res.status(200).json({ message: "WELCOME TO FITNESS BACK-END" });
   });
   
-
+console.log(res.body.api)
 
 module.exports = server;
