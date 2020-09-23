@@ -40,8 +40,8 @@ REGISTER CLIENT
 
 register example:
 
-    "username":"client3",
-	"password":"password3"
+    "username":"client1",
+	"password":"password1"
 
 LOGIN CLIENT
 
@@ -62,8 +62,8 @@ REGISTER INSTRUCTOR
 register example:
 
 
-    "username":"client3",
-	"password":"password3"
+    "username":"instructor1",
+	"password":"password1"
 
 
 LOGIN INSTRUCTOR
