@@ -52,14 +52,15 @@ router.post("/login", async (req, res, next) => {
 
       if (!passwordValid) {
           return res.status(401).json({
-              message: "You shall not pass!"
+              message: "Invalid password"
           });
       }
 
       const token = jwt.sign({
           userID: user.id,
+          userRole: "instructor",
           
-  }, "secret")
+  }, process.env.JWT_SECRET)
 
   
   res.cookie("token", token)

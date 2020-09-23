@@ -1,9 +1,11 @@
 const jwt = require("jsonwebtoken")
 
-function restrict(){
+function restrict(role){
+
+  const roles = ["client", "instructor"]
   return async (req, res, next) =>{
     const authError = {
-      message:"You shall not pass!"
+      message:"Invalid credentials"
     };
 
     try {
@@ -11,11 +13,18 @@ function restrict(){
       if(!token) {
         return res.status(401).json(authError);
       }
-      jwt.verify(token, "secret", (err, decoded)=>{
+      jwt.verify(token, process.env.JWT_SECRET, (err, decoded)=>{
         if(err){
           return res.status(401).json(authError)
         };
 
+        if (
+          role && roles.indexOf(decoded.userRole) < roles.indexOf(role)
+      ) {
+          return res.status(401).json(authError);
+      }
+
+          
         next();
       });
 
