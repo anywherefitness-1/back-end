@@ -1,5 +1,10 @@
 # back-end
 
+
+DEPLOYMENT LINK: https://fitnesssmaster.herokuapp.com/
+
+
+
 /--------------------------------------------/ CLASS ROUTES /-----------------------------------/
 
 GET CLASSES
