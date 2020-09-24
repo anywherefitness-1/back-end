@@ -23,11 +23,6 @@ server.get("/", (req, res) => {
     res.status(200).json({ message: "WELCOME TO FITNESS BACK-END" });
   });
   
-<<<<<<< HEAD
 console.log(res.body.api)
 
-=======
-
-// small change
->>>>>>> 898d004f78a5d4aa7d5835bbe5d4472c7ca72479
 module.exports = server;
